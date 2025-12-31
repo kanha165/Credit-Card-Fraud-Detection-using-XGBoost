@@ -104,24 +104,23 @@ Images were saved using:
 plt.savefig("image.png", dpi=300, bbox_inches="tight")
 🗂️ Project Structure
 
-credit-card-fraud-detection-xgboost/
+XGboost/
 │
-├── data/
-│   └── creditcard.csv
 │
-├── notebooks/
-│   └── fraud_detection.ipynb
+├── _confusion_matrix.png        # Confusion Matrix graph (Matplotlib)
 │
-├── images/
-│   ├── roc_curve.png
-│   ├── confusion_matrix.png
-│   └── feature_importance.png
+├── _roc.png                     # ROC Curve graph (Matplotlib)
 │
-├── model/
-│   └── xgboost_fraud_model.pkl
+├── creditcard.csv               # Original dataset (CSV)
 │
-├── requirements.txt
-└── README.md
+├── creditcard.csv.zip           # Dataset zip file (backup / download)
+│
+├── train_Model.ipynb            # Main Jupyter Notebook (model training)
+│
+├── xgboost_fraud_model.pkl      # Saved trained XGBoost model
+│
+└── README.md                    # Project documentation (GitHub)
+
 ▶️ How to Run the Project
 1️⃣ Clone the Repository
 
