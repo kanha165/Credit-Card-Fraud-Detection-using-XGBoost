@@ -65,6 +65,8 @@ colsample_bytree = 0.8
 scale_pos_weight = 100
 eval_metric = "logloss"
 random_state = 42
+
+
 📈 Model Evaluation
 To properly evaluate performance on imbalanced data, the following metrics were used:
 
@@ -74,12 +76,16 @@ Confusion Matrix
 
 Recall (Fraud Class)
 
+
+
 🔢 Results
 ROC-AUC: ~0.97
 
 Fraud Recall: ~87%
 
 Missed Fraud Cases (FN): 13
+
+
 
 📊 Visualizations
 All graphs were created using Matplotlib:
@@ -94,12 +100,10 @@ Feature Importance Bar Chart
 
 Images were saved using:
 
-python
-Copy code
+
 plt.savefig("image.png", dpi=300, bbox_inches="tight")
 🗂️ Project Structure
-powershell
-Copy code
+
 credit-card-fraud-detection-xgboost/
 │
 ├── data/
@@ -120,13 +124,11 @@ credit-card-fraud-detection-xgboost/
 └── README.md
 ▶️ How to Run the Project
 1️⃣ Clone the Repository
-bash
-Copy code
+
 git clone https://github.com/your-username/credit-card-fraud-detection-xgboost.git
 cd credit-card-fraud-detection-xgboost
 2️⃣ Install Dependencies
-bash
-Copy code
+
 pip install -r requirements.txt
 3️⃣ Run the Notebook
 Open fraud_detection.ipynb and run the cells step by step.
@@ -142,8 +144,7 @@ Custom fraud probability threshold
 
 Example:
 
-python
-Copy code
+
 prob = model.predict_proba(sample)[0][1]
 if prob >= 0.3:
     print("Fraud Transaction")
