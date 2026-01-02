@@ -86,7 +86,7 @@ eval_metric = "logloss"
 random_state = 42
 
 
-📈 Model Evaluation
+###📈 Model Evaluation
 To properly evaluate performance on imbalanced data, the following metrics were used:
 
 ROC-AUC Score
@@ -97,7 +97,7 @@ Recall (Fraud Class)
 
 
 
-🔢 Results
+###🔢 Results
 ROC-AUC: ~0.97
 
 Fraud Recall: ~87%
@@ -106,7 +106,7 @@ Missed Fraud Cases (FN): 13
 
 
 
-📊 Visualizations
+###📊 Visualizations
 All graphs were created using Matplotlib:
 
 ROC Curve (Dark Theme)
@@ -121,7 +121,7 @@ Images were saved using:
 
 
 plt.savefig("image.png", dpi=300, bbox_inches="tight")
-🗂️ Project Structure
+###🗂️ Project Structure
 
 XGboost/
 │
@@ -140,7 +140,7 @@ XGboost/
 │
 └── README.md                    # Project documentation (GitHub)
 
-▶️ How to Run the Project
+###▶️ How to Run the Project
 1️⃣ Clone the Repository
 
 git clone https://github.com/your-username/credit-card-fraud-detection-xgboost.git
@@ -177,7 +177,7 @@ Compare with AdaBoost and Random Forest
 
 Apply SMOTE and analyze results
 
-👤 Author
+###👤 Author
 Kanha Patidar
 B.Tech (CSIT)
 Machine Learning & Data Science Enthusiast
