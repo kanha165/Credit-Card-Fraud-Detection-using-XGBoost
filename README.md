@@ -1,72 +1,8 @@
 # 💳 Credit Card Fraud Detection using XGBoost
 
 ## 📌 Project Overview
-Credit card fraud detection is a critical machine learning problem due to the highly imbalanced nature of real-world transaction data. Fraudulent transactions are extremely rare compared to normal transactions, which makes accuracy an unreliable metric.
-
-This project implements an **end-to-end machine learning pipeline** using **XGBoost** to detect fraudulent credit card transactions. The focus is on improving **fraud recall** while maintaining strong overall performance. The project also includes **professional visualizations using Matplotlib**.
-
----
-
-## 🎯 Problem Statement
-- Fraud cases account for less than **0.2%** of all transactions
-- Traditional models fail on imbalanced datasets
-- The key goal is to **minimize missed fraud cases (False Negatives)**
-
----
-
-## 💡 Solution Approach
-- Used **XGBoost Classifier** for robust boosting-based learning
-- Handled class imbalance using **scale_pos_weight**
-- Evaluated the model using **ROC-AUC, Confusion Matrix, and Recall**
-- Visualized results using **Matplotlib**
-- Saved the trained model for reuse and testing
-
----
-
-## 📊 Dataset Information
-
-The dataset used in this project is the **Credit Card Fraud Detection Dataset**.
-
-⚠️ **Note:**  
-The dataset file is **very large in size**, which exceeds GitHub’s file size limit.  
-Therefore, the dataset is **not uploaded to this repository**.
-
-You can download the dataset directly from Kaggle using the link below:
-
-🔗 **Kaggle Dataset Link:**  
-https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
-
-### Dataset Details
-- Total transactions: 284,807  
-- Fraud transactions: 492  
-- Normal transactions: 284,315  
-- Highly imbalanced dataset  
-- Features `V1` to `V28` are PCA-transformed for privacy protection  
-
-After downloading, place the `creditcard.csv` file in the project root directory before running the notebook.
-
----
-
-
-### 🔑 Features
-- `Time` – Time elapsed since the first transaction  
-- `V1` to `V28` – PCA-transformed numerical features (privacy-protected)  
-- `Amount` – Transaction amount  
-- `Class` – Target variable  
-  - `0` → Normal  
-  - `1` → Fraud  
-
-> PCA was applied to anonymize sensitive information while preserving important patterns.
-
----
-
-## ⚙️ Tech Stack
-- Python  
-- NumPy  
-- Pandas  
-- Matplotlib  
-- Scikit-learn  
-- XGBoost  
+This project implements a machine learning model to detect fraudulent credit card transactions using **XGBoost**.
+Due to the highly imbalanced nature of the dataset, special techniques are used to improve fraud detection performance.
 
 ---
 
@@ -84,9 +20,7 @@ colsample_bytree = 0.8
 scale_pos_weight = 100
 eval_metric = "logloss"
 random_state = 42
-
-
-###📈 Model Evaluation
+📈 Model Evaluation
 To properly evaluate performance on imbalanced data, the following metrics were used:
 
 ROC-AUC Score
@@ -95,18 +29,14 @@ Confusion Matrix
 
 Recall (Fraud Class)
 
-
-
-###🔢 Results
+🔢 Results
 ROC-AUC: ~0.97
 
 Fraud Recall: ~87%
 
 Missed Fraud Cases (FN): 13
 
-
-
-## 📊 Visualizations
+📊 Visualizations
 All graphs were created using Matplotlib:
 
 ROC Curve (Dark Theme)
@@ -119,37 +49,45 @@ Feature Importance Bar Chart
 
 Images were saved using:
 
-
+python
+Copy code
 plt.savefig("image.png", dpi=300, bbox_inches="tight")
-###🗂️ Project Structure
-
+🗂️ Project Structure
+python
+Copy code
 XGboost/
 │
-│
-├── _confusion_matrix.png        # Confusion Matrix graph (Matplotlib)
-│
-├── _roc.png                     # ROC Curve graph (Matplotlib)
-│
-├── creditcard.csv               # Original dataset (CSV)
-│
-├── creditcard.csv.zip           # Dataset zip file (backup / download)
-│
-├── train_Model.ipynb            # Main Jupyter Notebook (model training)
-│
-├── xgboost_fraud_model.pkl      # Saved trained XGBoost model
-│
-└── README.md                    # Project documentation (GitHub)
+├── _confusion_matrix.png        # Confusion Matrix graph
+├── _roc.png                     # ROC Curve graph
+├── creditcard.csv               # Original dataset (not pushed due to size)
+├── creditcard.csv.zip           # Dataset backup
+├── train_Model.ipynb            # Model training notebook
+├── xgboost_fraud_model.pkl      # Saved trained model
+└── README.md                    # Project documentation
+📊 Dataset Information
+⚠️ Note:
+The dataset file is very large and exceeds GitHub’s file size limit,
+so it is not uploaded to this repository.
 
-###▶️ How to Run the Project
+You can download the dataset from Kaggle:
+
+🔗 Kaggle Dataset Link
+https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
+After downloading, place creditcard.csv in the project folder.
+
+▶️ How to Run the Project
 1️⃣ Clone the Repository
-
-git clone https://github.com/your-username/credit-card-fraud-detection-xgboost.git
-cd credit-card-fraud-detection-xgboost
+bash
+Copy code
+git clone https://github.com/kanha165/Credit-Card-Fraud-Detection-using-XGBoost.git
+cd Credit-Card-Fraud-Detection-using-XGBoost
 2️⃣ Install Dependencies
-
+bash
+Copy code
 pip install -r requirements.txt
 3️⃣ Run the Notebook
-Open fraud_detection.ipynb and run the cells step by step.
+Open train_Model.ipynb and run the cells step by step.
 
 🧪 Testing the Model
 The trained model can be tested using:
@@ -162,8 +100,10 @@ Custom fraud probability threshold
 
 Example:
 
-
+python
+Copy code
 prob = model.predict_proba(sample)[0][1]
+
 if prob >= 0.3:
     print("Fraud Transaction")
 else:
@@ -177,7 +117,7 @@ Compare with AdaBoost and Random Forest
 
 Apply SMOTE and analyze results
 
-###👤 Author
+👤 Author
 Kanha Patidar
 B.Tech (CSIT)
 Machine Learning & Data Science Enthusiast
@@ -191,4 +131,3 @@ This project is intended for learning, academic, and portfolio purposes.
 
 ⭐ Support
 If you like this project, please consider giving it a ⭐ on GitHub.
-
