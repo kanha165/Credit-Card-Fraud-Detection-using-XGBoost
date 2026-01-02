@@ -112,11 +112,21 @@ Compare with AdaBoost and Random Forest
 Apply SMOTE and analyze results
 
 👤 Author
-Kanha Patidar
-B.Tech (CSIT)
-Machine Learning & Data Science Enthusiast
+
+Developed by Kanha Patidar
+
+Branch: B.Tech CSIT
+
+Semester: 5th Semester
+
+College: Chameli Devi Group of Institutions, Indore
+
+Role: Machine Learning Intern
+
+Organization: Technorizen Software Solution Pvt. Ltd., Indore
 
 🔗 GitHub: https://github.com/kanha165
+
 🔗 LinkedIn: https://www.linkedin.com/in/kanha-patidar-837421290/
 
 ⭐ Acknowledgment
