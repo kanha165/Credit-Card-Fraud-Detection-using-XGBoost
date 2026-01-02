@@ -24,10 +24,37 @@ This project implements an **end-to-end machine learning pipeline** using **XGBo
 ---
 
 ## 📊 Dataset Information
-- **Source:** Kaggle – Credit Card Fraud Dataset  
-- **Total Transactions:** 284,807  
-- **Fraud Transactions:** 492  
-- **Normal Transactions:** 284,315  
+
+The dataset used in this project is the **Credit Card Fraud Detection Dataset**.
+
+⚠️ **Note:**  
+The dataset file is **very large in size**, which exceeds GitHub’s file size limit.  
+Therefore, the dataset is **not uploaded to this repository**.
+
+You can download the dataset directly from Kaggle using the link below:
+
+🔗 **Kaggle Dataset Link:**  
+https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
+### Dataset Details
+- Total transactions: 284,807  
+- Fraud transactions: 492  
+- Normal transactions: 284,315  
+- Highly imbalanced dataset  
+- Features `V1` to `V28` are PCA-transformed for privacy protection  
+
+After downloading, place the `creditcard.csv` file in the project root directory before running the notebook.
+
+---
+
+## 🔗 Author & Links
+
+👤 **Kanha Patidar**  
+Machine Learning Enthusiast | B.Tech (CSIT)
+
+- 💻 GitHub: https://github.com/kanha165  
+- 💼 LinkedIn: https://www.linkedin.com/in/kanha-patidar-837421290/
+
 
 ### 🔑 Features
 - `Time` – Time elapsed since the first transaction  
