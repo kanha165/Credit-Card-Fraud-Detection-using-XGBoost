@@ -47,14 +47,6 @@ After downloading, place the `creditcard.csv` file in the project root directory
 
 ---
 
-## 🔗 Author & Links
-
-👤 **Kanha Patidar**  
-Machine Learning Enthusiast | B.Tech (CSIT)
-
-- 💻 GitHub: https://github.com/kanha165  
-- 💼 LinkedIn: https://www.linkedin.com/in/kanha-patidar-837421290/
-
 
 ### 🔑 Features
 - `Time` – Time elapsed since the first transaction  
