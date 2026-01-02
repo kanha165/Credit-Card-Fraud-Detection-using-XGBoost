@@ -106,7 +106,7 @@ Missed Fraud Cases (FN): 13
 
 
 
-###📊 Visualizations
+## 📊 Visualizations
 All graphs were created using Matplotlib:
 
 ROC Curve (Dark Theme)
