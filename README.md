@@ -49,12 +49,9 @@ Feature Importance Bar Chart
 
 Images were saved using:
 
-python
-Copy code
 plt.savefig("image.png", dpi=300, bbox_inches="tight")
 🗂️ Project Structure
-python
-Copy code
+
 XGboost/
 │
 ├── _confusion_matrix.png        # Confusion Matrix graph
@@ -78,13 +75,11 @@ After downloading, place creditcard.csv in the project folder.
 
 ▶️ How to Run the Project
 1️⃣ Clone the Repository
-bash
-Copy code
+
 git clone https://github.com/kanha165/Credit-Card-Fraud-Detection-using-XGBoost.git
 cd Credit-Card-Fraud-Detection-using-XGBoost
 2️⃣ Install Dependencies
-bash
-Copy code
+
 pip install -r requirements.txt
 3️⃣ Run the Notebook
 Open train_Model.ipynb and run the cells step by step.
@@ -100,8 +95,7 @@ Custom fraud probability threshold
 
 Example:
 
-python
-Copy code
+
 prob = model.predict_proba(sample)[0][1]
 
 if prob >= 0.3:
