@@ -70,7 +70,7 @@ eval_metric = "logloss"
 random_state = 42
 
 
-## 📈 Model Performance
+# 📈 Model Performance
 
 ROC-AUC: ~0.97
 
