@@ -1,17 +1,65 @@
-# 💳 Credit Card Fraud Detection using XGBoost
+![Python](https://img.shields.io/badge/Language-Python-blue)
+![ML](https://img.shields.io/badge/Machine%20Learning-XGBoost-orange)
+![Status](https://img.shields.io/badge/Project-Credit_Card_Fraud_Detection-green)
 
-## 📌 Project Overview
-This project implements a machine learning model to detect fraudulent credit card transactions using **XGBoost**.
-Due to the highly imbalanced nature of the dataset, special techniques are used to improve fraud detection performance.
+# Credit Card Fraud Detection using XGBoost
+
+An end-to-end **Machine Learning project** to detect fraudulent credit card transactions using the **XGBoost Classifier**.  
+This project focuses on handling **highly imbalanced data**, improving **fraud recall**, and visualizing results using **Matplotlib**.
 
 ---
 
-## 🤖 Machine Learning Model
-- **Algorithm:** XGBoost Classifier  
-- **Task:** Binary Classification  
+## 🚀 Features
 
-### 🔧 Hyperparameters
+### ✓ Data Preprocessing
+
+- Feature scaling
+- Train–test split
+
+### ✓ Imbalanced Data Handling
+
+- Used `scale_pos_weight` to handle rare fraud cases
+
+### ✓ Machine Learning Model
+
+- XGBoost Classifier
+- Binary Classification (Fraud / Normal)
+
+### ✓ Model Evaluation
+
+- ROC-AUC Score
+- Confusion Matrix
+- Recall (Fraud Class)
+
+### ✓ Visualization
+
+- ROC Curve (Dark Theme)
+- Confusion Matrix Heatmap
+- Feature Importance Plot
+
+### ✓ Model Saving
+
+- Trained model saved as `.pkl` file
+
+---
+
+## ⚙️ Technologies Used
+
+- Python 3
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+- XGBoost
+
+---
+
+## 🔧 Model Configuration
+
 ```python
+Algorithm: XGBoost Classifier
+Task: Binary Classification
+
 n_estimators = 200
 learning_rate = 0.05
 max_depth = 5
@@ -20,23 +68,21 @@ colsample_bytree = 0.8
 scale_pos_weight = 100
 eval_metric = "logloss"
 random_state = 42
-📈 Model Evaluation
-To properly evaluate performance on imbalanced data, the following metrics were used:
 
-ROC-AUC Score
 
-Confusion Matrix
+## 📈 Model Performance
 
-Recall (Fraud Class)
-
-🔢 Results
 ROC-AUC: ~0.97
 
 Fraud Recall: ~87%
 
 Missed Fraud Cases (FN): 13
 
-📊 Visualizations
+
+
+## 📊 Visualizations
+
+
 All graphs were created using Matplotlib:
 
 ROC Curve (Dark Theme)
@@ -47,91 +93,88 @@ Train vs Test ROC Curve
 
 Feature Importance Bar Chart
 
-Images were saved using:
+Saved using:
 
 plt.savefig("image.png", dpi=300, bbox_inches="tight")
-🗂️ Project Structure
 
+##📁 Project Structure
 XGboost/
 │
-├── _confusion_matrix.png        # Confusion Matrix graph
-├── _roc.png                     # ROC Curve graph
-├── creditcard.csv               # Original dataset (not pushed due to size)
-├── creditcard.csv.zip           # Dataset backup
-├── train_Model.ipynb            # Model training notebook
-├── xgboost_fraud_model.pkl      # Saved trained model
-└── README.md                    # Project documentation
-📊 Dataset Information
+├── _confusion_matrix.png
+├── _roc.png
+├── creditcard.csv        # Not pushed (large file)
+├── creditcard.csv.zip
+├── train_Model.ipynb
+├── xgboost_fraud_model.pkl
+└── README.md
+
+##📊 Dataset Information
+
 ⚠️ Note:
-The dataset file is very large and exceeds GitHub’s file size limit,
-so it is not uploaded to this repository.
+The dataset is very large and exceeds GitHub’s file size limit, so it is not uploaded.
 
-You can download the dataset from Kaggle:
-
-🔗 Kaggle Dataset Link
+🔗 Kaggle Dataset:
 https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
 After downloading, place creditcard.csv in the project folder.
 
-▶️ How to Run the Project
-1️⃣ Clone the Repository
-
+##▶️ How to Run
 git clone https://github.com/kanha165/Credit-Card-Fraud-Detection-using-XGBoost.git
 cd Credit-Card-Fraud-Detection-using-XGBoost
-2️⃣ Install Dependencies
-
 pip install -r requirements.txt
-3️⃣ Run the Notebook
-Open train_Model.ipynb and run the cells step by step.
-
-🧪 Testing the Model
-The trained model can be tested using:
-
-Test dataset
-
-Manual transaction input
-
-Custom fraud probability threshold
-
-Example:
 
 
+Open train_Model.ipynb and run cells step by step.
+
+##🧪 Testing the Model
 prob = model.predict_proba(sample)[0][1]
 
 if prob >= 0.3:
     print("Fraud Transaction")
 else:
     print("Normal Transaction")
-🚀 Future Improvements
-Deploy the model using Streamlit
 
-Add real-time transaction testing
+##🧠 Core Concepts Used
 
-Compare with AdaBoost and Random Forest
+Supervised Machine Learning
 
-Apply SMOTE and analyze results
+Boosting Algorithms
 
-👤 Author
+Imbalanced Data Handling
 
-Developed by Kanha Patidar
+Model Evaluation Metrics
 
-Branch: B.Tech CSIT
+Data Visualization
 
-Semester: 5th Semester
+Model Serialization
 
-College: Chameli Devi Group of Institutions, Indore
+##🔥 Future Improvements
 
-Role: Machine Learning Intern
+Streamlit deployment
 
-Organization: Technorizen Software Solution Pvt. Ltd., Indore
+Real-time fraud detection
 
-🔗 GitHub: https://github.com/kanha165
+Compare with AdaBoost & Random Forest
 
-🔗 LinkedIn: https://www.linkedin.com/in/kanha-patidar-837421290/
+Apply SMOTE
 
-⭐ Acknowledgment
+Monitoring dashboard
+
+##👤 Author
+
+Kanha Patidar
+B.Tech CSIT (5th Semester)
+Chameli Devi Group of Institutions, Indore
+Machine Learning Intern — Technorizen Software Solution Pvt. Ltd.
+
+GitHub: https://github.com/kanha165
+
+LinkedIn: https://www.linkedin.com/in/kanha-patidar-837421290/
+
+##⭐ Acknowledgment
+
 Dataset provided by Kaggle.
-This project is intended for learning, academic, and portfolio purposes.
+For learning, academic, and portfolio purposes.
 
-⭐ Support
-If you like this project, please consider giving it a ⭐ on GitHub.
+##⭐ If you like this project, please give it a star on GitHub!
+```
